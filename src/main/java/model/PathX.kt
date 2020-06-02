@@ -26,6 +26,10 @@ class PathX : MutableMap.MutableEntry<MutableList<Int>, Int> {
         value = cost
     }
 
+    fun equals(other: PathX): Boolean {
+        return this.key == other.key && this.value == other.value
+    }
+
     override fun toString(): String {
         return "" + key +
                 "\t\t" + value
