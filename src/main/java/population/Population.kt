@@ -2,7 +2,7 @@ package population
 
 import model.PathX
 
-abstract class Population : ArrayList<PathX>(), IPopulation {
+abstract class Population(private val origList: MutableList<PathX>) : MutableList<PathX> by origList, IPopulation {
 
     override lateinit var name: PopulationName
 

@@ -12,8 +12,8 @@ class PopulationTest {
 
     @Test
     fun nameTest() {
-        val populationChild = PopulationChild()
-        val populationParent = PopulationParent()
+        val populationChild = PopulationChild(mutableListOf())
+        val populationParent = PopulationParent(mutableListOf())
         assert(populationChild.name == PopulationName.Children)
         assert(populationParent.name == PopulationName.Parents)
     }
@@ -26,16 +26,14 @@ class PopulationTest {
         pathX0.setValue(8)
         pathX1.setValue(3)
         pathX2.setValue(6)
-        val population = PopulationParent()
-        population.add(pathX0)
-        population.add(pathX1)
-        population.add(pathX2)
+
+        val population = PopulationParent(mutableListOf(pathX0, pathX1, pathX2))
         assert(population.bestValue.value == pathX1.value)
     }
 
 
     @BeforeAll
     fun init() {
-            PathX.setDistanceValues(DistanceInstance1)
+        PathX.setDistanceValues(DistanceInstance1)
     }
 }

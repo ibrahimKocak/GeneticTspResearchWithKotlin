@@ -1,6 +1,8 @@
 package population
 
-class PopulationParent : Population() {
+import model.PathX
+
+class PopulationParent(origList: MutableList<PathX>) : Population(origList) {
     init {
         name = PopulationName.Parents
     }
