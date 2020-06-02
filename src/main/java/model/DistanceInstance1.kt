@@ -5,7 +5,7 @@ object DistanceInstance1 : IDistanceValues {
     override val values: Array<IntArray>
         get() = distance
 
-    private val distance = arrayOf<IntArray>(
+    private val distance = arrayOf(
             /*00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20*/
             /*00*/ intArrayOf(-1, 89, 32, 86, 33, 57, 66, 32, 69, 80, 90, 64, 29, 36, 78, 33, 88, 89, 45, 87, 76),
             /*01*/ intArrayOf(84, -1, 61, 61, 61, 30, 60, 53, 53, 85, 50, 89, 43, 73, 28, 45, 29, 75, 51, 86, 72),

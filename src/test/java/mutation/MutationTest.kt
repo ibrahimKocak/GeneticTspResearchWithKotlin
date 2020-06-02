@@ -10,16 +10,16 @@ class MutationTest {
     fun insertTest() {
 
         mutation = MutationInsert()
-        list = mutableListOf(0,1)
+        list = mutableListOf(0, 1)
         mutation.infect(list)
-        assert(list == listOf(1,0))
+        assert(list == listOf(1, 0))
     }
 
     @Test
     fun insertTestExpert() {
         mutation = MutationInsert()
         for (i in 0..99) {
-            list = mutableListOf(0,1,2)
+            list = mutableListOf(0, 1, 2)
             mutation.infect(list)
             assert(list == listOf(1, 0, 2) || list == listOf(2, 0, 1) || list == listOf(0, 2, 1))
         }
@@ -28,7 +28,7 @@ class MutationTest {
     @Test
     fun reverseTest() {
         mutation = MutationReverse()
-        list = mutableListOf(0,1)
+        list = mutableListOf(0, 1)
         mutation.infect(list)
         assert(list == listOf(1, 0))
     }
@@ -37,7 +37,7 @@ class MutationTest {
     fun reverseTestExpert() {
         mutation = MutationReverse()
         for (i in 0..99) {
-            list = mutableListOf(0,1,2)
+            list = mutableListOf(0, 1, 2)
             mutation.infect(list)
             assert(list == listOf(1, 0, 2) || list == listOf(0, 2, 1) || list == listOf(2, 1, 0))
         }
@@ -46,7 +46,7 @@ class MutationTest {
     @Test
     fun swapTest() {
         mutation = MutationSwap()
-        list = mutableListOf(0,1)
+        list = mutableListOf(0, 1)
         mutation.infect(list)
         assert(list == listOf(1, 0))
     }
@@ -55,7 +55,7 @@ class MutationTest {
     fun swapTestExpert() {
         mutation = MutationSwap()
         for (i in 0..99) {
-            list = mutableListOf(0,1,2)
+            list = mutableListOf(0, 1, 2)
             mutation.infect(list)
             assert(list == listOf(1, 0, 2) || list == listOf(0, 2, 1) || list == listOf(2, 1, 0))
         }
