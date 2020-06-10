@@ -28,7 +28,7 @@ class PopulationTest {
         pathX2.setValue(6)
 
         val population = PopulationParent(mutableListOf(pathX0, pathX1, pathX2))
-        assert(population.bestValue.value == pathX1.value)
+        assert(population.best.value == pathX1.value)
     }
 
 

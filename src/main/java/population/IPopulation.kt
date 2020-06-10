@@ -4,6 +4,7 @@ import model.PathX
 
 interface IPopulation {
     val name: PopulationName
-    val bestValue: PathX
+    val best: PathX
+    val worst: PathX
     fun printBestValue()
 }

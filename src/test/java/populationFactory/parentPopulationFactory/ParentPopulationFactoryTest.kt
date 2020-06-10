@@ -29,7 +29,7 @@ class ParentPopulationFactoryTest {
         val population: Population = parentPopulationFactory.population
         val pathX = PathX(listOf(0, 12, 14, 18, 20, 7, 4, 11, 9, 8, 16, 13, 15, 1, 5, 17, 19, 6, 2, 10, 3))
 
-        assert(population.bestValue.equals(pathX))
+        assert(population.best.equals(pathX))
     }
 
     @BeforeAll

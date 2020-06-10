@@ -6,11 +6,14 @@ abstract class Population(private val origList: MutableList<PathX>) : MutableLis
 
     override lateinit var name: PopulationName
 
-    override val bestValue: PathX
+    override val best: PathX
         get() = this.minBy { pathX -> pathX.value }!!
 
+    override val worst: PathX
+        get() = this.maxBy { pathX -> pathX.value }!!
+
     override fun printBestValue() {
-        val bestPathX: PathX = bestValue
+        val bestPathX: PathX = best
         println("""Best of $name
         ${bestPathX.key}	${bestPathX.value}""")
     }
