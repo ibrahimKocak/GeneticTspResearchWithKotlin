@@ -6,7 +6,7 @@ import population.Population
 class SelectionByBetterThanMax : ISelection {
     override fun naturalSelection(parents: Population, children: Population) {
 
-        var worstParent: PathX = parents.worst
+        var worstParent = parents.worst
 
         for (pathXC in children) {
             if (pathXC.value < worstParent.value && !parents.map { PathX -> PathX.key }.contains(pathXC.key)) {

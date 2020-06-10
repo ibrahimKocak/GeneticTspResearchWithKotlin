@@ -7,7 +7,7 @@ class SelectionByIndexing : ISelection {
 
     override fun naturalSelection(parents: Population, children: Population) {
 
-        val count: Int = children.size
+        val count = children.size
 
         for (i in 0 until count) {
 
